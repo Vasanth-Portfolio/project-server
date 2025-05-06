@@ -1,6 +1,6 @@
 let transactions = [
-    { id: 1, description: 'Salary', amount: 3000, type: 'income', date: '2023-05-01', category: 'Salary' },
-    { id: 2, description: 'Rent', amount: 1000, type: 'expense', date: '2023-05-02', category: 'Housing' }
+    { id: 1, description: 'Salary', amount: 3000, type: 'income', date: '2025-05-01', category: 'Salary' },
+    { id: 2, description: 'Rent', amount: 1000, type: 'expense', date: '2025-05-02', category: 'Housing' }
   ];
   
   function calculateBalance() {
