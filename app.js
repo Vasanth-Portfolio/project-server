@@ -7,10 +7,21 @@ const expenseRoutes = require('./src/routes/transactions.routes');
 
 const app = express();
 
-app.use(cors({ origin: process.env.CORS_ORIGIN }));
-app.use(bodyParser.json());
+const corsOptions = {
+  origin: [
+    'http://localhost:5173',
+    "https://vasanth.website",
+    'https://project-server-rs8l.onrender.com' 
+  ],
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
 
-// Routes
+app.use(cors(corsOptions));
+app.use(bodyParser.json());
+app.options('*', cors(corsOptions)); 
+
 app.use('/api/todos', todoRoutes);
 app.use('/api/expense', expenseRoutes);
 
