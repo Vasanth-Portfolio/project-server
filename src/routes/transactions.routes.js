@@ -14,6 +14,6 @@ router.get('/:id', getTransaction);
 router.post('/', createTransaction);
 router.put('/:id', updateTransaction);
 router.delete('/:id', deleteTransaction);
-router.get('/balance', getBalance);
+router.get('/', getBalance);
 
 module.exports = router;
